@@ -15,4 +15,7 @@ echo "Adding the extension to .ini files";
 sudo echo  "extension = mongodb.so" >> /etc/php/7.0/cli/php.ini;
 sudo echo  "extension = mongodb.so" >> /etc/php/7.0/fpm/php.ini;
 
+echo "Restarting nginx and php7.0-fpm";
+sudo service nginx restart && sudo service php7.0-fpm restart
+
 echo "Done installing MongoDB extension, have fun!";
